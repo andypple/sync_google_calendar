@@ -1,0 +1,41 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.0.2
+  UseCache: true
+  NewCops: enable
+  Exclude:
+    - 'spec/**/*'
+    - 'node_modules/**/*'
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'config/routes.rb'
+    - 'config/environments/development.rb'
+    - '**/*.rake'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*'
+
+Style/ClassAndModuleChildren:
+  Enabled: false
